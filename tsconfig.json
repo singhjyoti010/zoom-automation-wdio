@@ -9,6 +9,7 @@
         ],
         "types": [
             "node",
+            "@wdio/types",
             "@wdio/globals/types",
             "expect-webdriverio",
             "@wdio/cucumber-framework"
