@@ -1,12 +1,6 @@
-Feature: The Internet Guinea Pig Website
+Feature: The Zoom Meeting Website
 
-  Scenario Outline: As a user, I can log into the secure area
+  Scenario Outline: As a user, I can log into the App
 
-    Given I am on the login page
-    When I login with <username> and <password>
-    Then I should see a flash message saying <message>
+    Given user logs in with user1
 
-    Examples:
-      | username | password             | message                        |
-      | tomsmith | SuperSecretPassword! | You logged into a secure area! |
-      | foobar   | barfoo               | Your username is invalid!      |
