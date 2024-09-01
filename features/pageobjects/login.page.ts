@@ -1,4 +1,3 @@
-import { $ } from '@wdio/globals';
 import loginControls from './login.controls';
 
 /**

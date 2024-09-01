@@ -1,5 +1,4 @@
-import { Given, When, Then } from '@wdio/cucumber-framework';
-import { expect, $ } from '@wdio/globals'
+import { Given } from '@wdio/cucumber-framework';
 import {LoginPage} from '../pageobjects/login.page.ts';
 
 import { userCredentials } from '../../utils/helperConstants.ts';
