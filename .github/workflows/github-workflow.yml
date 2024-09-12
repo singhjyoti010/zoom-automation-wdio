@@ -1,6 +1,9 @@
 name: Continuous Integration
 run-name: running test on GitHub image
-on: [push]
+on: 
+  push:
+    branches: 
+     - singhjyoti010
 jobs:
   Explore-GitHub-Actions:
     runs-on: windows-latest
