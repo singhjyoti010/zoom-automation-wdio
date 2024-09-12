@@ -1,6 +1,7 @@
 name: Continuous Integration
 run-name: running test on GitHub image
 on: 
+  workflow_dispatch:
   push:
     branches: 
      - singhjyoti010
