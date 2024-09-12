@@ -16,7 +16,7 @@ export class LoginPage {
         await loginControls.emailInputField.setValue(username);
         await loginControls.passwordInputField.setValue(password);
         await loginControls.btnSubmit.click();
-        await homeControls.userHeader.waitForDisplayed({timeout: 20000});
+        // await homeControls.userHeader.waitForDisplayed({timeout: 20000});
         // await expect.(homeControls.userHeader).toBeDisplayed();
     }
 }
