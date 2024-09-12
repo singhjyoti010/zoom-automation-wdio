@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches: 
-     - singhjyoti010
+     - singhjyoti
 jobs:
   Explore-GitHub-Actions:
     runs-on: windows-latest
