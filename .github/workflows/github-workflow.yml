@@ -1,19 +1,22 @@
-name: GitHub Actions Demo
+name: Continuous Integration
 run-name: running test on GitHub image
 on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: windows-latest
     steps:
+      # Install a chromium browser in the runner
+      - name: Install Chromium
+        run: sudo apt-get install chromium-browser
       - name: Checkout
         uses: actions/checkout@v4.1.7
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.3
         with: 
-          node-version: 20
-      - name: npm install
+          node-version: 20.x
+      - name: Install dependencies
         run: npm install
-      - name: Run script
+      - name: Run E2E test
         run: npm run wdio
       - name: Publishing artifacts
         uses: actions/upload-artifact@v3.2.1-node20
