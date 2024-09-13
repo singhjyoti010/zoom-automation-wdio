@@ -1,16 +1,20 @@
 name: Continuous Integration
 run-name: running test on GitHub image
 on: 
+  workflow_dispatch:
   push:
     branches: 
-     - singhjyoti010
+     - singhjyoti
 jobs:
   Explore-GitHub-Actions:
     runs-on: windows-latest
     steps:
       # Install a chromium browser in the runner
       - name: Install Chromium
-        run: sudo apt-get install chromium-browser
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: 120
+          install-chromedriver: true
       - name: Checkout
         uses: actions/checkout@v4.1.7
       - name: Setup Node.js environment
