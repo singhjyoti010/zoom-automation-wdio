@@ -1,4 +1,4 @@
-import { Given, When, Then } from "@wdio/cucumber-framework";
+import { Given, When } from "@wdio/cucumber-framework";
 import { LoginPage } from "../pageobjects/method-defination/login.page";
 import { userCredentials } from "../../utils/helperConstants";
 import { HomePage } from "../pageobjects/method-defination/home.page";
