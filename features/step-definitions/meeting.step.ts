@@ -1,16 +1,13 @@
 import { Given, When, Then } from "@wdio/cucumber-framework";
 import { LoginPage } from "../pageobjects/method-defination/login.page";
-import { userCredentials } from "../../utils/helperConstants";
 import { HomePage } from "../pageobjects/method-defination/home.page";
+import { userCredentials } from "../../utils/helperConstants";
 
 const loginPage = new LoginPage();
 const homePage = new HomePage();
 
-Given('user1 is at the home page', async () => {
+Given("user is at 'Meetings' page", async () =>{
     await browser.url('/signin');
     await loginPage.login(userCredentials.user1, userCredentials.password);
-})
-
-When('user1 checks left nav list items', async () => { 
     await homePage.goToMeetings();
 })

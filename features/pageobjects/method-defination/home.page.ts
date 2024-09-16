@@ -1,5 +1,5 @@
-import { HomeControls } from "./home.controls";
-import { MeetingControls } from "./meeting.controls";
+import { HomeControls } from "../controls/home.controls";
+import { MeetingControls } from "../controls/meeting.controls";
 
 const homeControls = new HomeControls();
 const meetingControls = new MeetingControls();
