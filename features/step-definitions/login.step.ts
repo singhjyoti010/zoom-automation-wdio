@@ -1,5 +1,5 @@
 import { Given } from '@wdio/cucumber-framework';
-import {LoginPage} from '../pageobjects/login.page.ts';
+import {LoginPage} from '../pageobjects/method-defination/login.page.ts';
 
 import { userCredentials } from '../../utils/helperConstants.ts';
 
