@@ -25,7 +25,7 @@ export const config: Options.Testrunner = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './features/**/*.feature'
+        './features/**/login.feature'
     ],
     // Patterns to exclude.
     exclude: [

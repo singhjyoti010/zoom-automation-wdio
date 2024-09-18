@@ -9,7 +9,6 @@ const homePage = new HomePage();
 const meetingPage = new MeetingPage();
 
 Given("user is at 'Meetings' page", async () => {
-    await browser.url('/signin');
     await loginPage.login(userCredentials.user1, userCredentials.password);
     await homePage.goToMeetings();
 })
@@ -19,7 +18,7 @@ When("user click 'schedule a Meeting'", async() => {
 })
 
 When("user fills 'Topic', 'When', 'Duration', 'TimeZone', and 'Meeting ID'", async() => {
-    await meetingPage.fillMeetingDetails();
+    await meetingPage.fillMeetingDetails('Test Meet');
 })
 
 When("user clicks on 'Save'", async () => {

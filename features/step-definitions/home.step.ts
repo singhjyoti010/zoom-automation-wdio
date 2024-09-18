@@ -7,7 +7,6 @@ const loginPage = new LoginPage();
 const homePage = new HomePage();
 
 Given('user1 is at the home page', async () => {
-    await browser.url('/signin');
     await loginPage.login(userCredentials.user1, userCredentials.password);
 })
 

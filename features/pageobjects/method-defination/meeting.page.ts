@@ -11,8 +11,8 @@ export class MeetingPage {
         await meetingControls.backToMeetingsLink.waitForDisplayed({timeout: 5000});
     }
 
-    async fillMeetingDetails() {
-        await meetingControls.topicInput.setValue('Test Meet');
+    async fillMeetingDetails(title: string) {
+        await meetingControls.topicInput.setValue(title);
         await meetingControls.meetingIDPersonal.click();
     }
 
