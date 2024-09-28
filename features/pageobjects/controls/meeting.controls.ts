@@ -16,7 +16,7 @@ export class MeetingControls {
     }
 
     get meetingIDPersonal() {
-        return $('(//div[@id="meeting-id"]//input)[last()]');
+        return $('#zm-radio-group1-radio-4');
     }
 
     get saveBtn() {

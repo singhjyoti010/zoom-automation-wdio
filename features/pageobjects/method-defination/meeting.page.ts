@@ -13,6 +13,10 @@ export class MeetingPage {
 
     async fillMeetingDetails(title: string) {
         await meetingControls.topicInput.setValue(title);
+        await meetingControls.meetingIDPersonal.scrollIntoView();
+        // await browser.pause(2000);
+        const radioButton = await $('#zm-radio-group1-radio-4');
+        await browser.execute(el => el.click(), radioButton);
         await meetingControls.meetingIDPersonal.click();
     }
 

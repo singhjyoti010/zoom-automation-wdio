@@ -15,7 +15,10 @@ export class LoginPage {
         await browser.url('/signin');
         await browser.maximizeWindow();
         await loginControls.emailInputField.setValue(username);
+        await browser.$('.banner-close-button').waitForClickable();
         await loginControls.passwordInputField.setValue(password);
+        await browser.$('.banner-close-button').click();
+        await browser.$('[aria-label="Open Preferences"]').waitForClickable();
         await loginControls.btnSubmit.click();
         await browser.saveScreenshot('./some/loginscreenshot.png');
         try {
