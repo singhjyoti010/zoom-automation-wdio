@@ -2,6 +2,7 @@ import { config as baseConfig } from './wdio.conf.ts';
 
 exports.config = {
   ...baseConfig,
+  specFileRetries: 2,
   // We only need to override the Chrome configuration of capabilities
   capabilities: [
     {

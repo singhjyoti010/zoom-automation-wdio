@@ -15,6 +15,10 @@ class LoginControls {
     public get btnSubmit () {
         return $("//*[contains(@id, 'login')]");
     }
+
+    public get errorBanner() {
+        return $('.zm-message__content')
+    }
 }
 
 export default new LoginControls();
