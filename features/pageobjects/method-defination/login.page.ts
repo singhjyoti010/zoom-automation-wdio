@@ -28,10 +28,10 @@ export class LoginPage {
                 await loginControls.btnSubmit.click();
             }
         } catch (e) {}
-        console.log('hi all' + await homeControls.userHeader.isExisting());
+        //console.log('hi all' + await homeControls.userHeader.isExisting());
         await browser.saveScreenshot('./some/screenshot.png');
         await homeControls.userHeader.waitForDisplayed({timeout: 30000});
         await browser.saveScreenshot('./some/screenshot4.png');
-        console.log(await homeControls.userHeader.isExisting());
+        // console.log(await homeControls.userHeader.isExisting());
     }
 }

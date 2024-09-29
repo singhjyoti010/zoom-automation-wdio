@@ -17,11 +17,18 @@ export class MeetingPage {
         // await browser.pause(2000);
         const radioButton = await $('#zm-radio-group1-radio-4');
         await browser.execute(el => el.click(), radioButton);
-        await meetingControls.meetingIDPersonal.click();
+        // await meetingControls.meetingIDPersonal.click();
     }
 
     async clickSave(){
-        await meetingControls.saveBtn.click();
+        await browser.pause(2000);
+        await browser.execute((el) => {
+                el.click();
+        }, meetingControls.saveBtn);
+        await browser.pause(2000);
+        if(await meetingControls.saveBtn.isDisplayed()){
+            await meetingControls.saveBtn.click();
+        }
         await meetingControls.meetingDetails.waitForDisplayed({timeout: 10000});
     }
 
